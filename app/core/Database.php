@@ -10,7 +10,7 @@ class Database {
     private $stmt;
 
     public function __construct(){
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname . '';
+        $dsn = 'mysql:host=localhost; dbname=learnmvc';
 
         $option = [
             PDO::ATTR_PERSISTENT=>true,

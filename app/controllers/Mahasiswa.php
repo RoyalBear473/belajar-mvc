@@ -8,4 +8,11 @@ class Mahasiswa extends Controller{
         $this->view('mahasiswa/index', $data);
         $this->view('tamplates/footer');
     }
+    public function details($id){
+        $data['title'] = 'Data Mahasiswa';
+        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById();
+        $this->view('tamplates/header', $data);
+        $this->view('mahasiswa/index', $data);
+        $this->view('tamplates/footer');
+    }
 }
