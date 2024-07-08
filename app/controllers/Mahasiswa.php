@@ -10,9 +10,9 @@ class Mahasiswa extends Controller{
     }
     public function details($id){
         $data['title'] = 'Data Mahasiswa';
-        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById();
+        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
         $this->view('tamplates/header', $data);
-        $this->view('mahasiswa/index', $data);
+        $this->view('mahasiswa/detail', $data);
         $this->view('tamplates/footer');
     }
 }
