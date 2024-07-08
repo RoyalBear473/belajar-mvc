@@ -30,7 +30,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="<?= BASEURL;?>/mahasiswa/tambah" method="post">
 
         <div class="mb-3">
             <label for="nama" class="form-label" id="nama" name="nama">Nama</label>
@@ -44,12 +44,20 @@
             <label for="email" class="form-label" id="email" name="email">Email</label>
             <input type="email" class="form-control" id="email" name="email"  placeholder="email">
         </div>
-        
+        <label for="jurusan" class="form-label" id="jurusan" name="jurusan">Jurusan</label>
+        <select class="form-select" aria-label="jurusan" id="jurusan" name="jurusan">
+            <option selected>Pilih Jurusan</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Psikologi">Psikologi</option>
+            <option value="Teknik Mesin">Teknik Mesin</option>
+            <option value="Teknik Sipil">Teknik Sipil</option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
+        </select>
 
       </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Tambah</button>
+            <button type="submit" class="btn btn-primary">Tambah</button>
         </form>
       </div>
     </div>
