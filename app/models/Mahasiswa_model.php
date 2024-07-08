@@ -11,8 +11,8 @@ class Mahasiswa_model{
         return $this->db->resultSet();
     }
     public function getMahasiswaById($id){
-        $this->db->query('SELECT * FROM ' . $this->table . 'WHERE id=:id');
-        $this->db->bind('id' , $id);
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id = :id');
+        $this->db->bind(':id' , $id);
         return $this->db->single();
     }
 }
