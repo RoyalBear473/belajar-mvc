@@ -16,12 +16,12 @@ class Mahasiswa_model{
         return $this->db->single();
     }
     public function tambahDataMahasiswa($data){
-        $query = "INSERT INTO mahasiswa VALUES '', :nama , :absen , :jurusan";
+        $query = "INSERT INTO mahasiswa (nama, absen, email, jurusan) VALUES (:nama, :absen, :email, :jurusan)";
         $this->db->query($query);
-        $this->db->bind('nama' , $_POST['nama']);
-        $this->db->bind('absen' , $_POST['absen']);
-        $this->db->bind('email' , $_POST['email']);
-        $this->db->bind('jurusan' , $_POST['jurusan']);
+        $this->db->bind(':nama' , $data['nama']);
+        $this->db->bind(':absen' , $data['absen']);
+        $this->db->bind(':email' , $data['email']);
+        $this->db->bind(':jurusan' , $data['jurusan']);
         $this->db->execute();
         $this->db->rowCount();
     }

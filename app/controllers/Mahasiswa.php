@@ -9,7 +9,7 @@ class Mahasiswa extends Controller{
         $this->view('tamplates/footer');
     }
     public function detail($id){
-        $data['title'] = 'Data Mahasiswa';
+        $data['title'] = 'Detail Mahasiswa';
         $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
         $this->view('tamplates/header', $data);
         $this->view('mahasiswa/detail', $data);
@@ -17,7 +17,7 @@ class Mahasiswa extends Controller{
     }
     public function tambah(){
         if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0){
-            header('Location' . BASEURL . '/mahasiswa');
+            header('Location: ' . BASEURL . '/mahasiswa/index');
             exit;
         }
     }
