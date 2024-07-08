@@ -23,6 +23,6 @@ class Mahasiswa_model{
         $this->db->bind(':email' , $data['email']);
         $this->db->bind(':jurusan' , $data['jurusan']);
         $this->db->execute();
-        $this->db->rowCount();
+        return $this->db->rowCount();
     }
 }
