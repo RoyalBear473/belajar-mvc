@@ -31,6 +31,6 @@ class Mahasiswa_model{
         $this->db->bind('id' , $id);
 
         $this->db->execute();
-        return $this->db->rowCount();
+        return $this->db->rowCount(); 
     }
 }
