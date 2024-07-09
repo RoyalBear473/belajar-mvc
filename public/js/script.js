@@ -11,6 +11,7 @@ $(function () {
   $(".editDataMhs").on("click", function () {
     $("#judulModalLabel").html("Update Data");
     $(".modal-footer button[type=submit]").html("ubah data");
+    $('.modal')
     const id = $(this).data("id");
     $.ajax({
       url: "http://localhost/learnmvc/public/mahasiswa/getubah",
