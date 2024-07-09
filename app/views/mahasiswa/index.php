@@ -51,15 +51,15 @@
 
         <div class="mb-3">
             <label for="nama">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama"  placeholder="nama">
+            <input type="text" class="form-control" id="nama" name="nama" autocomplete="off">
         </div>
         <div class="mb-3">
             <label for="absen">Absen</label>
-            <input type="number" class="form-control" id="absen" name="absen"  placeholder="absen">
+            <input type="number" class="form-control" id="absen" name="absen" autocomplete="off">
         </div>
         <div class="mb-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email"  placeholder="email">
+            <input type="email" class="form-control" id="email" name="email" autocomplete="off">
         </div>
         <label for="jurusan">Jurusan</label>
         <select class="form-select" aria-label="jurusan" id="jurusan" name="jurusan">

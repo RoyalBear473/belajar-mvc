@@ -13,12 +13,10 @@ $(function () {
       data: { id: id },
       method: "post",
       datatype: "json",
-      success: function(data) {
+      success: function (data) {
+        console.log(data);
         $("#nama").val(data.nama);
-        // $("#absen").val(data.absen);
-        // $("#email").val(data.email);
-        // $("#jurusan").val(data.jurusan);
-      },
+      }
     });
   });
 });
