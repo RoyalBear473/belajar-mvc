@@ -43,14 +43,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="judulModal">Tambah Data</h1>
+        <h1 class="modal-title fs-5" id="judulModalLabel">Tambah Data</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form action="<?= BASEURL;?>/mahasiswa/tambah" method="post">
 
         <div class="mb-3">
-            <label for="nama">Nama</label>
+            <label for="nama" id>Nama</label>
             <input type="text" class="form-control" id="nama" name="nama" autocomplete="off">
         </div>
         <div class="mb-3">
