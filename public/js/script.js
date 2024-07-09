@@ -16,7 +16,8 @@ $(function () {
       success: function (data) {
         console.log(data);
         $("#nama").val(data.nama);
-      }
+        console.log(data.nama)
+      },
     });
   });
 });
