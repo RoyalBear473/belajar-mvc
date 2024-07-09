@@ -2,18 +2,10 @@ $(function () {
   $(".tombolTambah").on("click", function () {
     $("#judulModalLabel").html("Tambah Data");
     $(".modal-footer button[type=submit]").html("tambah data");
-    $.ajax({
-        url: "http://localhost/learnmvc/public/mahasiswa/getubah",
-        data: { id: id },
-        method: "post",
-        dataType: "json",
-        success: function (data) {
-        $("#nama").val();
-        $("#absen").val();
-        $("#email").val();
-        $("#jurusan").val();
-        },
-    });
+    $("#nama").val('');
+    $("#absen").val('');
+    $("#email").val('');
+    $("#jurusan").val('');
   });
 
   $(".editDataMhs").on("click", function () {
