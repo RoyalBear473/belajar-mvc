@@ -15,9 +15,17 @@
           <h3>Data Mahasiswa</h3>
           <ul class="list-group">
               <?php foreach($data['mhs'] as $mhs) :?>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <li class="list-group-item ">
                       <?= $mhs['nama'] ?>
-                      <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs['id'];?>" class="badge text-bg-primary">Detail</a>
+                      <a href="<?= BASEURL;?>/mahasiswa/delete/<?= $mhs['id'];?>" 
+                          class="badge text-bg-danger float-end ms-2 link-underline link-underline-opacity-0"
+                          onclick="return confirm('Yakin Dek?');">
+                          Delete
+                      </a>
+                      <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs['id'];?>" 
+                        class="badge text-bg-primary float-end ms-2 link-underline link-underline-opacity-0">
+                        Detail
+                      </a>
                   </li>
               <?php endforeach; ?>
           </ul>
