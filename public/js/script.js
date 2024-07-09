@@ -7,7 +7,7 @@ $(function () {
   $(".editDataMhs").on("click", function () {
     $("#judulModal").html("Update Data");
     $(".modal-footer button[type=submit]").html("ubah data");
-    const id = $(this).data("id");
+    const id = $(this).data('id');
     $.ajax({
       url: "http://localhost/learnmvc/public/mahasiswa/getubah",
       data: { id: id },
@@ -15,8 +15,8 @@ $(function () {
       datatype: "json",
       success: function (data) {
         console.log(data);
-        $("#nama").val(data.nama);
-        console.log(data.nama)
+        $('#nama').val(data.nama);
+        console.log(data.nama);
       },
     });
   });
