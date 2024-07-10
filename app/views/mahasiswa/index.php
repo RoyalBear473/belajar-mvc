@@ -51,7 +51,7 @@
         <input type="hidden" name="id" id="id">
 
         <div class="mb-3">
-            <label for="nama" id>Nama</label>
+            <label for="nama">Nama</label>
             <input type="text" class="form-control" id="nama" name="nama" autocomplete="off">
         </div>
         <div class="mb-3">

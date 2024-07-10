@@ -33,12 +33,12 @@ class Mahasiswa_model{
         $this->db->execute();
         return $this->db->rowCount(); 
     }
-    public function updateDataMahasiswa($id){
+    public function updateDataMahasiswa($data){
         $query = "UPDATE mahasiswa SET 
                     nama = :nama,
-                    absen= :absen,
-                    email= :email,
-                    jurusan = :jurusan WHERE id=:id";
+                    absen = :absen,
+                    email = :email,
+                    jurusan = :jurusan WHERE id = :id";
         $this->db->query($query);
         $this->db->bind(':nama' , $data['nama']);
         $this->db->bind(':absen' , $data['absen']);
