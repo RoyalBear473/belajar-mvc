@@ -2,16 +2,16 @@ $(function () {
   $(".tombolTambah").on("click", function () {
     $("#judulModalLabel").html("Tambah Data");
     $(".modal-footer button[type=submit]").html("tambah data");
-    $("#nama").val('');
-    $("#absen").val('');
-    $("#email").val('');
-    $("#jurusan").val('');
+    $("#nama").val("");
+    $("#absen").val("");
+    $("#email").val("");
+    $("#jurusan").val("");
   });
 
   $(".editDataMhs").on("click", function () {
     $("#judulModalLabel").html("Update Data");
     $(".modal-footer button[type=submit]").html("ubah data");
-    $('.modal')
+    $(".modal-body form").attr("action", "http://localhost/learnmvc/public/mahasiswa/ubah");
     const id = $(this).data("id");
     $.ajax({
       url: "http://localhost/learnmvc/public/mahasiswa/getubah",
@@ -23,6 +23,7 @@ $(function () {
         $("#absen").val(data.absen);
         $("#email").val(data.email);
         $("#jurusan").val(data.jurusan);
+        $("#id").val(data.id);
       },
     });
   });
